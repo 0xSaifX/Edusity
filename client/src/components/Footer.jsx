@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BookOpen, Twitter, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -26,20 +27,20 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-gray-900 mb-6">Explore</h4>
                         <ul className="space-y-4 text-gray-500 text-sm">
-                            <li className="hover:text-primary-600 cursor-pointer">Courses</li>
-                            <li className="hover:text-primary-600 cursor-pointer">Categories</li>
-                            <li className="hover:text-primary-600 cursor-pointer">Instructors</li>
-                            <li className="hover:text-primary-600 cursor-pointer">Pricing</li>
+                            <li><Link to="/courses" className="hover:text-primary-600">Courses</Link></li>
+                            <li><Link to="/categories" className="hover:text-primary-600">Categories</Link></li>
+                            <li><Link to="/instructors" className="hover:text-primary-600">Instructors</Link></li>
+                            <li><Link to="/pricing" className="hover:text-primary-600">Pricing</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="font-bold text-gray-900 mb-6">Support</h4>
                         <ul className="space-y-4 text-gray-500 text-sm">
-                            <li className="hover:text-primary-600 cursor-pointer">Help Center</li>
-                            <li className="hover:text-primary-600 cursor-pointer">Terms of Service</li>
-                            <li className="hover:text-primary-600 cursor-pointer">Privacy Policy</li>
-                            <li className="hover:text-primary-600 cursor-pointer">Contact Us</li>
+                            <li><Link to="/help" className="hover:text-primary-600">Help Center</Link></li>
+                            <li><Link to="/terms" className="hover:text-primary-600">Terms of Service</Link></li>
+                            <li><Link to="/privacy" className="hover:text-primary-600">Privacy Policy</Link></li>
+                            <li><Link to="/contact" className="hover:text-primary-600">Contact Us</Link></li>
                         </ul>
                     </div>
 

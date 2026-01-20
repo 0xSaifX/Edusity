@@ -1,8 +1,10 @@
 import React from 'react';
 import { PlayCircle, Users, Award, Star, Search, Filter } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <div className="space-y-20">
             {/* Hero Section */}
@@ -25,8 +27,8 @@ const Home = () => {
                                 Join over 10 million learners from all around the world. Study for your dream career or level up your hobby with our expert-led courses.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <button className="btn-primary shadow-xl shadow-primary-200">Start Learning Free</button>
-                                <button className="btn-secondary">Explore All Courses</button>
+                                <button onClick={() => navigate('/register')} className="btn-primary shadow-xl shadow-primary-200">Start Learning Free</button>
+                                <button onClick={() => navigate('/')} className="btn-secondary">Explore All Courses</button>
                             </div>
                             <div className="flex items-center gap-8 justify-center lg:justify-start pt-4">
                                 <div className="flex items-center gap-2">
@@ -72,8 +74,8 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold text-gray-900 mb-12">Top Categories</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {['School subjects', 'Business', 'Entrepreneurship'].map((cat) => (
-                            <div key={cat} className="p-8 rounded-2xl border border-gray-100 hover:border-primary-200 hover:shadow-xl transition-all cursor-pointer group">
+                        {['School subjects', 'Business', 'Entrepreneurship', 'Technology', 'Design', 'Marketing'].map((cat) => (
+                            <div key={cat} onClick={() => navigate('/')} className="p-8 rounded-2xl border border-gray-100 hover:border-primary-200 hover:shadow-xl transition-all cursor-pointer group">
                                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary-600">{cat}</h3>
                                 <p className="text-gray-500">Explore over 500+ courses in this field.</p>
                             </div>

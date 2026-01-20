@@ -28,9 +28,9 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-8">
-                        <Link to="/" className="text-gray-600 hover:text-primary-600 transition-colors">Courses</Link>
-                        <Link to="/" className="text-gray-600 hover:text-primary-600 transition-colors">Categories</Link>
-                        <Link to="/" className="text-gray-600 hover:text-primary-600 transition-colors">Business</Link>
+                        <Link to="/courses" className="text-gray-600 hover:text-primary-600 transition-colors">Courses</Link>
+                        <Link to="/categories" className="text-gray-600 hover:text-primary-600 transition-colors">Categories</Link>
+                        <Link to="/instructors" className="text-gray-600 hover:text-primary-600 transition-colors">Instructors</Link>
 
                         {user ? (
                             <div className="flex items-center gap-4">
@@ -70,8 +70,9 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="md:hidden bg-white border-t p-4 space-y-4">
-                    <Link to="/" className="block text-gray-600">Courses</Link>
-                    <Link to="/" className="block text-gray-600">Categories</Link>
+                    <Link to="/courses" className="block text-gray-600">Courses</Link>
+                    <Link to="/categories" className="block text-gray-600">Categories</Link>
+                    <Link to="/instructors" className="block text-gray-600">Instructors</Link>
                     {user ? (
                         <>
                             <Link to={`/dashboard/${user.role}`} className="block text-gray-600">Dashboard</Link>
