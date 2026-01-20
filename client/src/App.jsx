@@ -10,17 +10,10 @@ import TeacherDashboard from './pages/TeacherDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import CourseDetails from './pages/CourseDetails';
 import LearningPage from './pages/LearningPage';
+import Courses from './pages/Courses';
+import Categories from './pages/Categories';
+import Instructors from './pages/Instructors';
 import { AuthProvider } from './context/AuthContext';
-
-// Placeholder components for footer links
-const Courses = () => <div className="p-20 text-center"><h1 className="text-3xl">Courses Page</h1><p>Coming soon...</p></div>;
-const Categories = () => <div className="p-20 text-center"><h1 className="text-3xl">Categories Page</h1><p>Coming soon...</p></div>;
-const Instructors = () => <div className="p-20 text-center"><h1 className="text-3xl">Instructors Page</h1><p>Coming soon...</p></div>;
-const Pricing = () => <div className="p-20 text-center"><h1 className="text-3xl">Pricing Page</h1><p>Coming soon...</p></div>;
-const HelpCenter = () => <div className="p-20 text-center"><h1 className="text-3xl">Help Center</h1><p>Coming soon...</p></div>;
-const TermsOfService = () => <div className="p-20 text-center"><h1 className="text-3xl">Terms of Service</h1><p>Coming soon...</p></div>;
-const PrivacyPolicy = () => <div className="p-20 text-center"><h1 className="text-3xl">Privacy Policy</h1><p>Coming soon...</p></div>;
-const Contact = () => <div className="p-20 text-center"><h1 className="text-3xl">Contact Us</h1><p>Coming soon...</p></div>;
 
 function App() {
   return (
@@ -41,11 +34,11 @@ function App() {
               <Route path="/courses" element={<Courses />} />
               <Route path="/categories" element={<Categories />} />
               <Route path="/instructors" element={<Instructors />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/help" element={<HelpCenter />} />
-              <Route path="/terms" element={<TermsOfService />} />
-              <Route path="/privacy" element={<PrivacyPolicy />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/pricing" element={<div className="p-20 text-center"><h1 className="text-3xl">Pricing Page</h1><p>Coming soon...</p></div>} />
+              <Route path="/help" element={<div className="p-20 text-center"><h1 className="text-3xl">Help Center</h1><p>Coming soon...</p></div>} />
+              <Route path="/terms" element={<div className="p-20 text-center"><h1 className="text-3xl">Terms of Service</h1><p>Coming soon...</p></div>} />
+              <Route path="/privacy" element={<div className="p-20 text-center"><h1 className="text-3xl">Privacy Policy</h1><p>Coming soon...</p></div>} />
+              <Route path="/contact" element={<div className="p-20 text-center"><h1 className="text-3xl">Contact Us</h1><p>Coming soon...</p></div>} />
             </Routes>
           </main>
           <Footer />
