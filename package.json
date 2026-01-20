@@ -1,0 +1,19 @@
+{
+  "name": "edusity-root",
+  "version": "1.0.0",
+  "description": "Edusity Full-Stack Platform",
+  "scripts": {
+  "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+  "client-install": "cd client && npm install",
+  "server-install": "cd server && npm install",
+  "build": "cd client && npm install && npm run build",
+  "heroku-postbuild": "cd client && npm install && npm run build",
+  "start": "cd server && npm start",
+  "dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
+  "server-dev": "cd server && npm run dev",
+  "client-dev": "cd client && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
